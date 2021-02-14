@@ -1,0 +1,2 @@
+Core developers: Wyatt, Max Kellerman, Xeor
+Scripts developers: Wyatt, Xeor

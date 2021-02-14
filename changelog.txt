@@ -1,0 +1,1085 @@
+----------------------------------1.2.7.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+  - Hiryus and Lesser Hiryus no longer get theit stats halved many times, at each retame.
+  - Artifact spellbooks no longer get their mod caps fixed as if them were crafted books.
+  - Miscellaneous fixes in labeling system (GM cheat prevention)
+  - Using a potion keg and targetting stack of bottles now consumes one bottle, not the entire stack.
+  - Bleed attack now works properly
+  - All Doom bosses now have a 10% probability of detecting hidden players within their range instead 25%
+  - No monsters can now ever be interrupted when casting a spell
+  - If you use scissors on cloth, now you will receive correct message
+  - Mobile/Item labels now shown centered
+  - Added restrictions to use spells/skills/abilities in animal form
+  - Shadowjump: fixed stealth check
+  - Shadowjump: fixed visual effect
+  - Fukiyas/Shurikens: throwing now takes you out of hide mode
+  - Flying fukiya dart animation now fixed.
+  - Invisibility and Hiding skill now remove war mode
+  - Animal Form now doesn't reveal caster
+  - No longer possible to enter unlimited stealth mode
+  - Confidence now restores health by 1hp portions
+  - Fixed bug where server crashed when player on ethereal mount gets poisoned.
+  - Luck calculation for killed monsters fixed. Now each killer's luck counted scaled to his damage percent.
+  - The Wanderer of the Void box in the Lamp Room can no longer be opened from the outside
+Additions:
+  - SunUO 0.1.9:
+      - fixed typo in Config.cs which disabled <ignore-type/>
+      - write etc/sunuo.xml only if it did not exist
+      - fixed NullReferenceException in overlay error handler
+      - added option to disable a script library
+      - added option to set the C# compiler's warning level
+      - fixed NullReferenceException in binary library loader
+      - library names are case insensitive
+      - added the --logfile option
+  - OSI Publish 33:
+      - Added petition functionality, you can now target up to three people when reporting a verbal harassment issue. Targeting players can be done in 3 methods:
+          - Selecting the player with a target cursor
+          - Searching through a list of players in the areab by typing in the name
+      - Purchasing an advanced character is now handled through an automated process.
+          - Activating promotional codes in game will give a token which can be activated or traded. Activating the token will begin the advanced character process.
+      - GM chat: working use '[' (only 4.0.11a client)
+      - Treasures of Tokuno event has ended
+          - Players no longer accumulate points towards Treasures of Tokuno rewards when defeating enemies
+          - Ihara Soka will still be around to reward players for turning in artifacts
+      - Doing a mouse-over of the house deed being traded will now provide more specific information on the house being traded
+      - Vendor contracts display a collect rent button even when they have no gold. This has been fixed so the option won't appear unless they have a value greater than 0
+      - The help screen has been updated:
+          - Links to the UO homepage have been updated.
+          - Only new players will have the option of teleporting to Haven
+          - New players are given the option to page a counselor
+          - Everyone will see the other -> other petition options
+      - Arrows that miss their target will now be recovered automatically, rather than dropping to the ground behind a mob
+      - Shortly after dropping out of war mode, any recoverable arrows will be placed in the player's backpack
+      - Addressed an issue with followers being lost at logout.
+          - When a player logs out, followers (pets, hired NPCs) will be auto-stabled, returning to the player upon login
+          - Pets that do not automatically return to the player can be claimed at the stable master
+  - Monster abilities:
+      - Arcane Daemons can now use Concussion Blow
+      - Gargoylee Enforcers and Abyssmal Horror gained Whirlwind Attack
+      - Shadow Knights now have both ConcussionBlow and CrushingBlow at their disposal
+      - Rikktor's chance of using Earthquake has been raised
+  - Special properties in player's property list: summary values from equipped items, kills, deaths (only for TC shards)
+  - Added NetState.ClientAddress field, which contains client address taken from character create/select request
+Changes:
+      - Champion skulls are now given to a player picked at random from the top attacker list, no longer to the one who dealt the most damage
+      - Champion skulls now will be Cursed (i.e. not insurable)
+      - Neira gains a speed boost when her hits go below 1/4
+      - Close Wounds now cures 0-2 more hps
+      - Curse Weapon now lasts longer (36 seconds at 120 Necromancy instead of 17)
+      - Mind Rot now lasts twice as much against NPCs
+      - Virtues: the maximum number of blue dots is now 30, not 40
+      - The Witch Apprentice quest now gives 2000~2200 gp as additional reward
+      - Text spoken by ghosts of players with GM Spirit Speak will now appear normal to everyone
+      - Both long and short kills displayed by "I must consider my sins" are now on the same line
+      - You no longer receive the "you may not enter" message when attempting to enter a private house
+      - Ancient Wyrms can now poison on hit
+      - Serpentine Dragons no longer gain control of pets
+      - Skeletal Dragons and Serpentine Dragons now have a 20% chance of dealing triple damage to pets
+      - All undead and elemental creatures are now immune to Bleed Attacks
+      - Correct hue values for Hiryu and Lesser Hiryu
+----------------------------------1.2.6.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+  - Spellbooks attributes were fixed, new caps for following attributes were set:
+      - Faster Casting: 1 
+      - Faster Cast Recovery: 2 
+      - Lower Reagent Cost: 16% 
+      - Lower Mana Cost: 6% 
+      - Spell Damage Increase: 9% 
+      - Bonus Int: 6 
+      - Mana Increase: 6 
+      - Mana Regeneration: 1 
+      - Skill Bonuses: 12
+  - It’s no longer possible to avoid being paralized in PVP casting spells that don’t freeze your movement
+  - If you throw a bola having your backpack full, weapon and shield will no longer fall on the ground, but will drop into your backpack 
+  - Barracoon no longer polymorph dead mobiles into rats
+  - Hidden players now revealed when throwing a bola
+  - Minor Artifact Enchanted Titan Leg Bone now one-handed
+  - Thieves now can steal from stack of items when total weight of entire stack is more than their backpack can hold
+  - SE items no longer spawns in mobiles and chests in any world except Tokuno's Islands
+  - Barracoon now has auto dispel ability
+  - Fixed fisher's chance to get minor artifact from Leviathan: 25% check now always applied before top damager's check
+  - Removed ability to place houses near Serado the Awakened champion spawn
+  - Major artifact Pigments of Tokuno now can hue stealable artifacts
+  - The Tear Kite Shield prices have been tweaked to match OSI. Most notably, they now sell for 37 gps, not 60
+  - Mana leeched by a necromancer while under Wraith Form is no longer only added to the necromancer's mana pool, it is now also subtracted from the victim's pool
+  - Both the Ship Model of the H.M.S. Cape and The Admiral's Hearty Rum can now be found on level 6 Treasure Chests, as well as on Leviathans
+  - The mongbats in Semidar's first spawn will now be of the Strong type
+  - Animal Form spell: bonus to increase movement speed now works
+  - Pets' total skill cap no longer capped at 700
+  - It is now possible to steal blessed items from NPC chests. Spawns will no longer be blocked by those unstealable blessed spellbooks
+  - Removed ability to loot criminal players' corpes in non-PvP facets
+  - Recall runes no longer lose their hue after adding in runebooks
+  - No longer can cast SE spells required more skill level than you have if you cast lesser skill spell before
+  - SmartAI mobiles no longer try to get 10 tiles away from summoned mobile to dispel it
+  - Fixed bug with Sacrifice virtue
+  - Finally fixed "wraith form" stamina bonus: players don't lose stamina pushing other mobiles
+  - Fixed problem with pack animals items visibility
+  - Fixed bug when game master can't see all loot in monster
+Additions:
+  - Dungeon Treasure Chests Generator: Felucca, Trammel  
+  - SunUO 0.1.8:
+      - more NetStat.Dispose() tweaks:
+          - a second Dispose() call continues with FinishDispose()
+          - call FinishDispose() in CheckAlive()
+      - remove duplicate data directories
+      - replaced World.MultiProcessor by Core.Config.MultiThreading
+      - added configuration file option for Core.Config.MultiThreading
+      - wait for send transfers to be finished before killing the connection in NetState.Dispose()
+      - Mono 1.1.7 is now recommended
+      - introduce the "path" element in the library configuration, allowing the administrator to specify arbitrary source paths
+      - dependencies for libraries
+      - overlays for libraries  
+  - Creature abilities:
+      - Unicorn ability. If their rider becomes poisoned and falls below 40 hit points, they will cure them. Once they cure their rider, they cannot cure them for another hour. This cure is always successful, regardless of the level of poison
+      - Ki-rin ability: Ki-rins cast a lightning bolt on any creature or player that brings its rider below 30 hit points, dealing 35-100 (random) damage that cannot be resisted. They may only do this once per hour
+Changes:
+  - OSI Publish 32.1:
+      - Melee and Archery swing rates have both been lowered by 0.5 seconds
+      - Archery move delay reduced to 0.25 seconds.
+  - Players with Detect Hidden skill now can find type of dungeon trap moving in trap field
+  - The Wither spell can now target hidden players as well as visible ones
+  - Bank checks are now marked as Blessed
+  - Exorcism spell: distances were changed: 18 tiles from champion spawn to cast spell and 5 tiles from you to teleport players
+  - Mortal Strike: If used on an already wounded target, the timer will no longer be reset
+  - Necromancers under Lich Form or Wraith Form are now immune to Bleed Attacks
+  - Peacemaking delay is now 5 seconds if you succeed, and 10 seconds if you fail
+  - Provocation delay is now 10 seconds if you succeed, and 5 seconds if you fail 
+  - White Wyrms will no longer eat gold, they will eat only meat
+  - Energy Vortices dispel resistance was changed as following: with magery 120 you will have only 75% to dispel, with 110 50%, and with 100 25%
+  - Spellbooks are no longer disarmable 
+  - All spells now consume only one Arcane Clothing charge, regardless of their circle
+  - It is now possible to steal Mallet and Chisel from NPC chests
+  - Concussion Blow: It no longer deals 10-40 random damage; the damage is now based on the difference between the defender's max hits and max mana, as well as the difference between current hits and current mana. In other words, it's most effective against those who are in good health and whore reserves of mana are low, or vice versa
+  - Champion skulls will now spawn inside the backpack of the player who dealt the highest damage to the champion
+  - Enhancing an item using a sewing kit while having an ancient smithy hammer equipped will no longer consume one ancient charge
+  - Paralyzing Blow: it is not possible to use parablow on a frozen/paralyzed target, the effect vanishes as soon as the target takes damage
+  - Assassins will no longer have fame/karma titles, they will just show as The murderer
+  - Colored anvils received as BOD prizes are now given in form of a hued deed
+  - Chance for dropping Glacial Staff and Daemon Armor was increased
+----------------------------------1.2.5.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+  - No longer need steal items from camp's chests
+  - Inactive champion spawns now have correct hue
+  - Fixed potential server crash bug with slayers
+  - 105 Power Scrolls no longer will become cursed after server's restart
+  - Fixed bug with Ihara Soko reward gump
+  - StarRoom Moongate now have correct destination location and will decays 3 minutes instead 2 minutes
+  - Fixed potential server crash bug with Doom Dark Guardians
+  - Fixed bug with Dark Guardians Room region: no longer recall from it
+  - Fukiyas, shurikens, fukiya darts, leather ninja belts now will craft with exceptional quality if chance was correct
+  - Corpse Skin spell now decrease fire and poison resists for 15 points instead 10
+  - Players in wraith form no longer loose their stamina at movement through other mobiles
+  - Paragons now will have fast speed
+  - Fixed potential server crash bug with slayers at spellbooks
+  - Fixed problem with uncorrect labeling items with plain text names
+  - Big Fish trophy deeds and addons now will show fisher name and weight of fish
+  - Fixed minor bug with Item.AddNameProperty method
+  - Scissors now will correct work with SE studded and leather armors
+  - Mage Armor property no longer will appears at leather armor
+  - Durability property no longer will appears at crafted armor
+  - Lower Stat Requiments property no longer will appears at leather armor
+  - At cast Invisibility spell targets of spell will loose their warmode status
+  - Hidden mobiles now stops their combats timers
+  - Public houses now correct count visits: not only at opening the house door
+  - Fixed minor bug causing unactivation of Doom Dark Guardian Room
+  - Fixed minor bug when players can teleport their corpse in Doom if corpse isn't in guardian's room
+  - Fixed minor bug causing players can be teleporterd under statue pedestal in Doom
+  - Fixed minor bug with Glacial Staff
+Additions:
+  - Completely rewritten stealeable artifacts generator: fixed spawners, weights, locations
+  - Doom Lamp Room Puzzle
+  - Mini House Malas Mountain Pass
+  - Decoration:
+      - Terra Sanctum: sparkles, posts, signs
+      - Lost Lands: signs
+      - Skara Brae: signs for cross teleporters now are localized objects      
+      - Ilshenar: teleporters, resurrection objects
+      - Britain Sewers: broken levers and switches
+      - Doom: missing statues
+  - OSI Publish 28:
+      - Instance Corpses
+           - Damaging a mob and making the top attackers list allows you access to its loot in an fairly distributed fashion
+               - The looting rights formula has remained unchanged 
+           - Players or parties who make the top attackers list will receive an "instanced" loot container
+           - This corpse container will only be accessible by the player and not viewable by others for 3 minutes
+               - Gold will be split evenly among all players on the top attackers list
+               - Generic stackable items (bolts/arrows, jewels, reagents, etc.) will also be divided among the top attackers
+               - Each player has a chance to receive up to 1/N (rounded up) of the creature's total items (where N = # top attackers)
+               - Resources (meat, skins, etc.) will go to the player on the top attackers list who first cuts up the corpse
+               - Items the creature has looted from a player will only be available to the player they came from for 3 minutes
+           - Each player's own Luck will play a role in determining the loot that is received
+           - In the case of a party, the member with the highest luck will be used
+           - Loot and resources left in the instance corpses will become available to everyone after 3 minutes are up
+           - PVP looting will not be affected by this change
+Changes:                                                      
+  - Success chances for crafting maps were updated to OSI
+  - Summon Familiar spell gump now will disappear after 1 minute after cast
+  - OSI Publish 31:
+       - Energy Vortices and Blade Spirits will now be limited to a total of six (6) per five by five (5x5) square of tiles centered around each Energy Vortex or Blade Spirits. Should the total number of Energy Vortices and Blade Spirits in an area exceed this limit Energy Vortices and Blade Spirits in the area will be selected at random and dispelled until the limit is no longer exceeded. No mana or reagents will be returned to the mage whose Energy Vortex of Blade Spirit was dispelled
+  - [Decorate command now supports item labeling
+  - Mini house deed "Church At Night" now has correct description
+  - Spellbooks, runebooks now can be marked with crafter name and exceptional quality
+  - Changes in Sacrifice:
+      - Enslaved gargoyle, gargoyle enforcer now include in sacriface mobiles list
+      - Fixed bug when player can get items back don't spend sacrifice
+  - Changes in Valor:
+      - Champion spawns now will be randomize if they are random type and used valor for activate
+      - Correct messages type at activate and advance: phrases said by champion idol
+      - Fixed number of points of valor need to activate, advance spawn and for valorious challenge
+      - At activate spawn with Valor 2-4 additional candles will be added to spawn, if less than 4, spawn can be used again with Valor
+      - Hidden players now can use Valor at spawn
+  - Changed message for stuck menu teleportation
+  - Mask Of Death and Greater Mask Of Death potions temporarily disabled according to worldwide OSI Publish 32 release
+  - Chances for crafting Confusion and Conflagration potions were changed according to worldwide OSI Publish 32 release
+  - Regular rares temporarity disabled
+  - Trophy deeds now blessed
+----------------------------------1.2.4.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+  - Glacial Staff now has correct displayed name
+  - Minor fix for chance of carrying minor artifacts: problem with very small luck
+  - Promotional Tokens now links soulstones and soulstones fragments to account of token's owner
+  - Fixed contents of dungeon treasure chests
+  - Fixed bug causing impossible to poison leather ninja belt
+  - Leather ninja belt and fukiya now display their poison property
+  - Detect Hidden skill now works for traps at dungeon treasure chests
+  - Damage of traps and Remove Trap skill dependences were fixed;
+  - Help gump for young players was updated to OSI
+  - Evil Orc Helm was updated to OSI
+  - Glacial Staff hit harm bonus was updated to OSI
+  - Fixed bug with ninja stealth spells
+  - Fire Beetle now again can smelt ore
+  - Fixed serious bug with crafting: item marking by constant name and no longer dependent on player change name 
+  - Fixed minor bug with Confidence spell
+  - Confidence spell no longer work for dead players
+  - Fixed bugs with Magic Trap spell and Remove Trap skill
+  - Necrospells inscribe min skills updated to OSI
+  - Hiryu and Lesser Hiryu now will be attack any closest creature
+  - Arch Cure spell no longer work for criminals
+  - No longer can sell items or use gold from locked containers
+  - No longer can insure items in locked containers
+  - Paragon chests no longer will display their gold in total gold mobile status while locked
+  - Items in Chest of Heirlooms now more correctly dropped
+  - Mana Regeneration property at spellbooks capped to 1
+  - After death of champion champion spawn now can be used by Valor
+  - Champion spawn's monsters now will be disappear after death of their champion  
+  - Mephitis web ability no longer will remove effect of any necromancer transformation spell
+  - Fixed bug causing that players under effect of Mephitis web ability can displayed as ogre
+Additions:
+  - OSI Publish 32:
+      - Three new Necromancer alchemy potions with two intensities each (regular and greater)
+          - Conflagration - Creates a field of flame with damage based on the strength of the potion.
+          - Mask of Death - Causes monsters to ignore a player for a duration based on the strength of the potion. Has no effect on monsters that are currently attacking you.
+          - Confusion Blast - Confuses all monsters in an area. The size of the area is based on the strength of the potion.
+      - Necromancer Exorcism spell
+          - Exorcism is a Necromancer spell that also requires GM Spirit Speak to cast
+          - Exorcism will relocate any player ghosts around the caster to a shrine on that facet
+          - Exorcism will only work in a champion spawn region
+          - Exorcism will not affect players who have a corpse on the same subserver
+          - Exorcism will not affect fellow faction, guild, alliance, or party members
+          - Players with GM Spirit Speak can now see the ghosts of other players at all times
+          - Exorcism scrolls will be craftable by scribes, drop off of some high ranking creatures, and can be sold to shopkeepers
+      - Added guild and alliance chat
+          - Use "\" for guild chat
+          - Use "|" (shift + "\") for alliance chat
+          - Guild and alliance chat color and ignore toggles added to options gump 
+      - Mini-house "Church at Night" as a 1st Year Veteran Reward
+      - Paragons are now hued bright yellow in 3D client
+      - Adding bows to the test center bankbox 
+      - Added a warning when your inventory is full that you need to make room in order to receive an artifact
+  - Underline titles for any object in world: items and mobiles
+  - System for preventing cheats from GM
+  - Decorate command was updated for TC shards
+  - Decoration:
+      - Pet Bonding Gates for TC shards
+  - Items:
+      - Fire Bomb
+  - Core:
+      - GraphicalEffect(0x70) Packet
+      - Support to "double" revision versions of client: client's version now displayed correctly for 4.0.10 clients
+Changes:
+  - Slayers list was updated to OSI
+  - OSI Publish 29:
+      - All Daemon Slayers will become demon slayers
+      - Daemon Slayers will no longer spawn
+      - Hiryu dismount special move can no longer be used to separate a Chaos Dragoon Elite from his mount
+  - Fukiya darts and fukiyas now can have poison property
+  - Fukiya now can be used from backpack
+  - Lord/Lady titles now are added to crafter label on item
+  - Luck bonus for any artifact (Doom, Paragon, TT) chance receiving capped to 1200
+  - Name of Idol Champion was updated to OSI
+  - Shields made with runic hammers now can have Reflect Physical property
+  - Harrower now will say some phrases 
+  - PowerScrolls received by Justice protectors now will be distribute randomly
+  - Potions kegs were updated to OSI: correct labels, new potion's types, target for empty bottles
+  - Magic hats were added in loot tables
+  - OSI Publish 32:
+      - Turning in a BOD removes the BOD timer based on BOD type (blacksmith/tailor)
+      - BOD quest offers now display time remaining in minutes instead of hours
+      - Vendors can no longer be dismissed until all of the gold they are holding as been collected
+      - The turn-in NPC for Treasures of Tokuno, Ihara Soko, can now find more than 10 artifacts in your inventory
+      - Replaced Polymorph gump with a better looking iconic choice gump
+      - Confirmation gump now appears when disabling auto-insurance
+      - Power scrolls given to dead players will now be placed in the player's corpse
+      - Decorative plants now display the plant type in their name
+      - Honor Embrace no longer work on controlled creatures
+      - The hard cap for Deathstrike damage is 70 if the target moves more than 5 steps in 5 seconds, or 30 if the target does not
+----------------------------------1.2.3.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+  - Unlock Spell now can be casted at anything
+  - [Caps command now supports SE skills
+  - Help Gump was updated to OSI
+  - Armor Pierce Special Move now requires 50.0 Bushido skill or 50.0 Ninjitsu skill
+  - Fixed bug causing problem with gain of Valor at Follower and Knight levels
+  - Fixed minor bug with Chaos Dragoon Elite
+  - Fixed bug with Glacial Staff
+  - ItemID, Hue, BodyID of Fire Beetle were updated to OSI
+  - Bushido and Ninjitsu skills now are included in mana cost skill's list for special moves
+  - Stamina of already existing Hiryus and Lesser Hiryus was fixed
+  - SE dungeons now have spell restrictions: it's allowed only "recall from" and "teleport to/from"
+  - Fukiya now have valid layer
+  - Fixed bug with player range sensitive: no longer works for tamed creatures
+  - Fixed bug with fukiya and leather ninja belt allowing charge it more than 10 charges
+  - Deleted spawning chests from decorations
+  - Tinker's tools now loss uses crafting traps
+  - Chest of Heirlooms now have 80 required lockpicking skill
+  - Treasure Chests no longer will have disabled trap
+Additions:
+  - Promotional Code System (client side)
+  - New Guild System
+  - Decoration:
+      - Miscellanious localized teleporters
+  - Materials submenu in Tailoring craft menu
+  - Dungeon Treasure Chests
+  - Doom Dark Guardians Room
+  - Mobiles:
+      - Dark Guardian
+  - Special ring and bracelet were added in bankboxes (only for TC shards)
+  - Server version now showing at character login
+Changes:
+  - Formula of Death Strike Spell damage bonus was changed according to OSI:
+      - tracking distance now included in damage
+      - max damage capped to 70
+      - formula now is linear
+  - Ki Attack and Backstab spells damage bonus was capped to 70
+  - On login now staff members have nightsight effect for themself
+  - Recall runes for Dungeon Doom now have correct description
+  - OSI Publish 31:
+      - Blade Spirits now take 3/5 the time to cast as they used to
+----------------------------------1.2.2.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+  - Fixed crash bug at recompiling scripts after adding new files in existing folders
+  - Minor fix for GumpButtonTileArt gump element: wrong order of parameters. Now format is: Format: public void AddButtonTileArt( int x, int y, int normalID, int pressedID, GumpButtonType type, int param, int buttonID, int itemid, int hue, int width, int height )
+  - Fixed bug with some stealable artifacts
+  - Necromancer transformations spells no longer check female/male armor validation
+  - Fixed bug with tinker traps causing internal items
+  - Minor fix for key rings
+  - Hiryu and Lesser Hiryu now will display their stamina in Animal Lore gump
+  - No longer can use Dismount special move under Animal Form spell
+  - Summon Creature spell no longer can be used in towns
+  - Minor fix with teleporters in Fan Dancer Dojo
+  - Fixed minor bug with tillerman
+Additions:
+  - BaseWeapon: Slayer2 property for weapons with 2 slayers: TT artifacts now
+  - Decoration:
+      - Resurrection Tree in Ilshenar
+      - Missing ankhs in Tokuno
+Changes:
+  - Tinker vendor's sell list now have all type of keys
+  - Creatures summoned by Summon Creature spell now take 1 slot instead 2
+  - Summons no longer have "(tame)" description
+  - Summons now have friends context menu
+  - Summons now say phrase at releasing 
+  - List of creatures in Summon Creature spell was updated to OSI
+  - OSI Publish 31:
+     - Improved the item properties of The Horselord
+     - Improved the item properties of Storm Grip
+     - Added Mana leech hit proc to the Wind's Edge
+     - Removed the ability to clothing bless the Major Artifact Kasa of Raj-In
+     - Promo tokens are now blessed 
+     - Promo tokens and Tokuno Minor Artifacts now added to player's bankbox at TC
+     - Summons:
+	 - Energy Vortices and Blade Spirits will now take two control slots.
+         - Energy Vortices and Blade Spirits now have double the hit points.
+	 - Energy Vortices get a massive boost to their dispel resist to bring them into parity with blade spirits and most of the controlled summons in this regard.
+	 - All magery summons, uncontrolled and controlled get a boost to their dispel resistance.
+         - Creatures with auto-dispel now only have a 10% change to dispel when hit by a summon, instead of a 100% chance. Barracoon is excepted from this and maintains his 100% dispel chance.
+     - Heal spell now heals 50% more damage when used on a target other than the caster.
+     - Spellbooks:
+         - Player crafted spellbooks now have a chance to have slayer properties.
+         - Lower Reagent Cost, Lower Mana Cost, and Mana Replenish can now be found on crafted spellbooks.
+         - Crafting a one property spellbook now only requires 80 magery. 
+         - Crafting a two property spellbook now only requires 90 magery.
+	 - Crafting the three property spellbook now only requires 100 magery. 
+	 - 110, and 120 magery each improve your odds of getting additional properties, but the number of properties is capped at 3.
+	 - Maximum property intensities are obtainable with just 100 magery.
+  - Composite Bow now requires 7 logs instead 10
+  - Focus Attack spell damage bonus was corrected to OSI
+  - Honorable Swords and Ancient Urn now have different names
+  - Some cosmetic changes in scripts
+----------------------------------1.2.1.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+ - Fixed potential server crash bug with Mephitis AI
+ - Pigments Of Tokuno no longer can be used at itself
+Additions:
+ - Gumps: GumpButtonTileArt element - button with item image, containing hue, itemid, width and height as parameters. Format: public void AddButtonTileArt( int x, int y, int normalID, int pressedID, int param, GumpButtonType type, int buttonID, int itemid, int hue, int width, int height )
+ - OSI Publish 31:
+      - Treasures of Tokuno phase 2 
+          - Locate Ihara Soko, the Imperial Minister of Trade, in Rokuon Cultural Center in Zento 
+          - Turn in 10 minor Treasures of Tokuno artifacts to receive a choice of any new major Tokuno artifact
+          - As you approach Ihara Soko with the minor artifacts, she will present you with a selection window 
+          - Ihara Soko will keep you updated on how many more artifacts you need to turn in before you receive your reward 
+          - Chest of Heirlooms that have been tampered with will not be accepted as a valid turn-in
+      - Players will now unhide when they die to prevent ghosts from trying to auto-stealth
+      - Major Artifacts:
+          - Sword of Prosperity 
+          - Sword of the Stampede
+	  - Wind's Edge
+          - Darkened Sky
+          - The Horselord
+	  - Rune Beetle Carapace 
+	  - Kasa of the Raj-in
+	  - Stormgrip
+	  - Tome of Lost Knowledge
+          - Pigments of Tokuno:
+	        - Paragon Gold
+		- Violet Courage Purple
+		- Invulnerability Blue
+		- Luna White
+		- Dryad Green
+		- Shadow Dancer Black
+		- Berserker Red
+		- Nox Green
+		- Rum Red
+		- Fire Orange	
+      - Promotional Tokens
+	 - Tokens can be more easily traded to other players than codes
+	 - Double-click the token to redeem what's in them
+	 - Applies to promotion codes for Soulstone, Soulstone Fragments, and Character Transfer 
+      - Soulstone Fragments
+         - Soulstone Fragments are limited use soulstones 
+         - Works like a soulstone, except each fragments contains only 5 charges and does not animate when filled
+         - Flushing a skill does not use up a charge 
+Changes:
+ - Pigments of Tokuno were updated to OSI
+ - Chest of Heirlooms now have enabled trap and lock, and can carry random jewelry
+ - ItemID of Black Lotus Hood was updated to OSI
+ - Hue of Tome Of Enlightment was updated to OSI
+ - Changed algorithm of carrying minor Treasures of Tokuno: more accuracy to OSI
+----------------------------------1.2.0.1----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+ - Fixed a lot of C# compiler warnings
+ - Workaround for the RunUO faction bug: Reflection.cs assumes
+ - Fixed a null cast in ScriptCompiler.CheckStamps()
+Changes:
+ - Alphabetically sorted directory entries; ScriptCompiler.cs now sorts
+ - Filenames before passing them to the compiler
+----------------------------------1.2.0.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+ - Faction gas and explosion traps now displayed correctly in craft menu
+ - Using the advanced template to create a character now ways to lose young status
+ - Fixed problem with 6th character slot
+ - Yomotsu Mines region now has correct name
+ - Fixed Tokuno Mini Artifacts reward message
+ - Fixed bug with stealing lockdown and secure stealable artifacts
+ - Fixed bug with Backstab spell
+ - Fixed bug with internal items and mobiles
+Additions:
+ - SunUO features:
+    - MONO 1.1.4 support
+    - New directory structure
+    - Multiple script libraries
+    - Excluding source codes and classes
+    - Separate login server from shard server
+    - Implemented a lot of exception handlers to prevent the server from crashing when an exception in a script occurs
+    - Recompiling libraries at server's start only if any script has been changed, deleted or added
+ - Tokuno Stealable Artifacts Generator
+ - Champions Monster Titles
+ - Mobiles:
+     - Chaos Dragoon
+     - Chaos Dragoon Elite
+ - Monster abilities:
+     - Angry Fire Attack
+     - Stomp Attack
+ - Publish 28:
+     - Capped barding difficulty at 160.0
+     - Added Barding Difficulty to Animal Lore gump. Barding Difficulty will show up as --- if the creature is completely non-bardable
+     - Removed all non-bardable flags from Champions of Evil and Doom Bosses, but added no-provoke and no-areapeacemaking flags on them if they use to be noBard or noPeacemaking
+     - Halved Discordance debuff vs. any creature with a barding difficulty of 160.0
+     - Paragons will no longer flee when near death
+ - Publish 30:
+     - Ranged poison cloud attack given to Yamandon and Serado the Awakened. This ranged attack does 20-25 points of direct damage plus level 5 poison to its target
+ - Items:
+     - Key Ring
+     - Iron Key
+     - Glacial Staff
+     - Sledge Hammer
+     - Old UO Gifts:
+         - Leprechaun suit
+         - Crystal Ball 
+         - Whispering Rose
+         - Bottle of Pink Champagne 
+         - Holiday Bells 
+	 - Snow Globe
+ - Craft:
+     - Traps in Tinkering craft menu                 
+Changes:
+ - SE hats now have durability property
+ - Samurai now need 50 or more Bushido skill to gain in Perfection
+ - Now at honoring the opponent Perfection of attacker set to 0
+ - Ancient Urn and Honorable Swords now has correct names of owners
+ - Tokuno Treasures no longer can be dropped by Cranes
+ - Flute of Renewal now has working Replenish Charges property
+ - Hue values of skull of Pain and skull of Death were updated to OSI
+ - Bake Kitsune and White Wyrm now can use its magic abilities to take the shape of a human
+ - At cancelling target using Honor Virtue, player now received correct message
+ - Origami Paper now send correct message to player when he opened it
+ - Complete changes in Valor:
+     - Changed amount of sacrifice portion for advance champion spawn 
+     - Valor gain was updated to OSI finally
+ - Using Remove Trap skill now player can be damaged by trap if he has lack skill
+ - Locked or trapped chests now can be opened by their owner  
+ - Meer Mages now can carry a piece of Daemon Bone Armor
+ - Tome Of Enlightenment now can be insured
+ - Champion spawn's monster now can be Paragons
+ - Initial statcap now equal 250 if Test Center enabled and 225 in other way
+ - Imporved monster spawns level counting
+----------------------------------1.1.6.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+- Fixed bug with fillable containers: now players can't lift items in it without stealing
+- Test Center set skill script no longer allows players to set SE skills on non-SE shards or AOS skills on non-AOS shards
+- Fixed obscure core bug where items spawned inside containers using the container OnLocationChange event would not be visible
+- Sphynx's damage was fixed
+- Some fixes with etherials
+- Fixed bug with armor repairing
+- Fixed bug with Gloves Of Sun artifact
+- Rewritten throwing abilities
+- Fire Beetle and Lesser Hiryu now can be bonded
+- Fixed bug with Evasion spell
+- Fixed bug with Mirror Image spell
+Additions:
+- Traffic Analyzer for players and server
+- Perfomance tab in admin panel now shows an overview of buffer pools to identify tuning or leakage issues and incoming/outgoing traffic for time of server's work
+- Champion spawns generator and controller
+- Core:
+- NetState class:
+- Incoming and Outgoing long variables for NetState's counting of traffic
+- Core class:
+- Incoming and Outgoing long variables for summary counting traffic per server's session work
+- Commands:
+- [Caps command for editing caps of targeted mobile
+- [Traffic: players can learn how many incoming and outgoing traffic they have in their session
+- Items:
+- GreanTeaBasket
+- Mobiles:
+- Necromancer                                   
+Changes:
+- Lifetime of Packets must now be strictly defined: if you want to send the same packet instance twice, you must first Acquire() it, and Release() it when finished. If you attempt to send a non-acquired packet twice, you will receive a warning in net_opt.log and the packet _WILL NOT_ be sent
+- Sending packets now reuses buffers when appropriate, reducing memory allocation rate
+- SendQueue.CoalescePerSlice is no longer optional. Coalesce can no longer be disabled by using 0 for CoalesceBufferSize; instead, use a very high value (not recommended).
+- Initial capacity of the NetState receive buffer pool doubled to 2048, relieving performance strain on servers that peak at over 1024 client count
+- Mana cost for inscribing necro scrolls was updated to OSI
+- Item's smelting now works likes OSI
+- No longer check CanCraft at double clicking on tool
+- Perfection luck bonus was updated to OSI
+- Confidence stance now lasts for 30 seconds instead 15
+- Counter Attack stance now lasts for 60 seconds instead 30
+- Weigth of some food was updated to OSI
+- Miscellanious changes in repair system
+- Some tweaks in tailoring craft menu
+- Items in vendor's lists now displayed in correct order
+- Publish 27:
+- Added level 5 treasure maps for rotting corpses
+----------------------------------1.1.4.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+ - Fixed britain starting location
+ - Fixed harrower spawns locations with OSI 
+ - Fixed bug where mass dispel success chance was inverted
+ - Fixed integer overflow issue with player vendors
+ - Fixed craft option 'do not color' 
+ - Armor is no longer damaged if a shield fully blocks the attack
+ - Many invalid UoamVendors spawner locations fixed
+ - Weight and artifact rarity value of some stealable artifacts were changed
+ - Minor bug fix with repair contracts
+ - Stealable containers now can be stealed again
+ - Fixed minor bug with Animal Form spell
+ - Dread Pirate Hat, Polar Bear Mask, Burglars Bandana, Divine Countenance, Hat Of The Magi, Hunters Headdress, Spirit Of The Totem artifacts now have durability property
+Additions:
+ - Server performance tab to the [admin panel, under information. Shows cycles per second and a measure of the core loop
+ - Publish 30:
+     - Treasures of Tokuno Phase 1
+	- Fight the creatures that inhabit the Tokuno Islands to recover unique Samurai Empire treasures
+	- Almost any creature on the islands or in the dungeons of Tokuno has a chance of rewarding you 1 of 20 different minor artifacts
+	- Your chances of finding an item are scaled based on the fame of the creature you defeat
+	- Recovered Tokuno items are placed in your bag (or bank if your cant carry anymore)
+	- This is a limited duration event 
+	- Treasures Of Tokuno:
+	    - Peasant's Bokuto
+	    - Exiler 
+	    - Dragon Nunchaku
+	    - The Destroyer 
+	    - Pilfered Dancer Fans
+	    - Demon Forks 
+	    - Hanzo's Bow 
+	    - Black Lotus Hood 
+	    - Daimyos Helm 
+	    - Arms of Tactical Excellence
+	    - Ancient Farmers Kasa
+	    - Gloves of the Sun
+	    - Legs of Stability
+	    - Ancient Samurai Do
+	    - Pigments of Tokuno
+	    - Flute of Renewal
+	    - Ancient Urn 
+	    - Honorable Swords
+	    - Chest of Heirlooms
+	    - Tome of Enlightenment
+ - Fillable container system supporting 35 different shop spawn types
+ - Respawning shop container support, to access you must lockpick and steal the items--they may not be picked up
+ - Durability property for BaseClothing 
+ - Items:
+    - AncientWall
+    - Rares:
+       - HorseShoes
+       - ForgedMetal
+       - WhiteDriedFlowers
+       - GreenDriedFlowers
+       - DriedOnions
+       - DriedHerbs
+       - PenAndInk
+ - Fillable containers:
+    - LibraryBookcase
+    - FillableBarrel
+    - FillableSmallCrate
+    - FillableLargeCrate
+    - FillableWoodenBox
+    - FillableWoodenChest
+    - FillableMetalBox
+    - FillableMetalChest
+    - FillableMetalGoldenChest
+ - Food:
+    - EarOfCorn
+    - Turnip
+    - CheeseSlice
+    - OpenCoconut
+    - Lemons
+    - Limes
+    - SlabOfBacon
+    - SmallWatermelon
+    - SmallPumpkin
+    - SheafOfHay (not edible)
+ - Mobiles:
+   - Sphynx          
+Changes:
+ - Samurai and Ninja characters no longer can be young characters 
+ - BaseClothing now tracks crafted resource, rather than only BaseShoes. For AOS+ servers, that resource is now also displayed in property window ("spined leather boots")
+ - Rope can no longer be turned with interior decorators
+ - Paragon chests can no longer be turned
+ - Dismount special ability now blocks the attacker from remounting for 3 seconds
+ - Crafting tools uses is now random from 25-75, rather than a static 50. Additionally, they may now be crafted exceptionally resulting in double the uses (50-150)
+ - CaptainQuacklebushsCutlass is no longer spawn on treasure chests
+ - Harrower tentacles will now reflect spells cast on them (excluding field and area spells). Additionally, their life drain range has been increased to 9 tiles
+ - Eggs are now stackable
+ - Chests recovered from fishing now have a chance to be metal where before it was only wooden
+ - Death robes are now hued a slightly darker shade of gray
+ - Repair success chance and chance to lose durability is now as OSI
+ - Meteor Swarm and Chain Lightning now have line-of-sight checks for any potentially affected players (AOS only)
+ - Trapped container effects and messages now match OSI. Also, players will now be hit with the trap when within 3 tiles range, where previously it was only 2
+ - Fishing nets monster spawn now has a tighter spawn range, the fisher is now unhidden, and the spawn focuses on him
+ - Sea serpents are now hued blue
+ - Deep sea serpents are now hued green
+ - Type of trap will now be graphically displayed in the crafting details menu
+ - Crafting spellbooks now have magic properties
+ - Leviathan was added in speed info groupc
+ - Leviathan's formula for giving MArties was changed
+ - Water Ball ability was updated 
+ - Shurikens and fukiya darts now can be used depand on Ninjitsu skill
+ - Smoke and egg bomb now can be used in combat and more tweaked to OSI
+ - Containers types and body types now keeps in text files instead binary and scripts
+ - Chances to craft SE items were updated 
+ - Internal BankBox ItemID is now correct to show without the golden trim
+ - Old mount prevention code using bola contexts and BaseMount locks removed; now uses BaseMount.SetMountPrevention
+ - Missing loot items for savages and efreet
+ - Daemon armor now has Self Repair 1 attribute 
+ - Killing innocent players with pets in Khaldun will now spawn revenents on the pets master
+ - No longer can dismount Neira using Dismount special move or bola
+ - NPC titles will now always be shown for AOS+ servers (override: Mobile.PropertyTitle for individual scripts, or Mobile.OldPropertyTitles globally)  
+ - Leviathan now regenerates as paragon monster
+ - Weight of repair contracts was updated to OSI
+ - At canceling valor target now player receive message likes at OSI
+ - Spellbooks and runebooks now can be exceptional
+ - Slayer groups were updated
+ - Decorations for all worlds were updated
+ - Player that fished Leviathan now have more chances to get artifact than other monster's killers
+----------------------------------1.1.2.0----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+ - Fixed minor vendor bug 
+ - Fixed minor "Emino Undertaking" quest bug 
+ - Hiryu and Lesser Hiryu now loss hits, mana and stamina after they have been tamed 
+ - Fixed bug with wrong count of online clients, showing in console 
+ - Labels of moongates in "The Little Shop Of Magic" in Haven were updated to OSI 
+ - Tribal, bear and deer masks now can't be dyable
+ - Self Repair now works at shields
+ - [UnFreeze command now works with Tokuno map
+ - Dryad Bow now has skill bonus
+ - Smoke and Egg Bombs now have delay before re-using
+ - Stuff with accesslevel lower than GameMaster no longer can rename players by dragging their healthbar
+ - Temporarity support for *nix systems
+ - Missing naturalist spawner in the study of the solen quest
+Additions:
+ - Repair Service Contracts 
+ - Virtues:
+    - Valor 
+ - AI:
+    - Abysmal Horror 
+    - Bone Demon 
+    - Doom Boss 
+    - Champion Melee 
+    - Dark Father 
+    - Impaler 
+    - Mephitis 
+    - Orc Scout 
+ - Stealable Artifacts:
+    - Doom Stealable Artifacts:
+        - Blade of the Righteous
+	- The Inquisitor's Resolution
+	- Titan's Hammer
+	- Zyronic Claw
+	- Backpack
+	- Bloody Water 
+	- Books
+	- Bottle
+	- Brazier
+	- Cocoon
+	- Damaged Books
+	- Egg Case 
+	- Gruesomme Standard
+        - Lamp Post 
+	- Leather Tunic 
+	- Rock
+	- Ruined Painting 
+	- Saddle
+	- Skinned Deer 
+	- Skinned Goat 
+        - Skull Candle 
+	- Stretched Hide 
+        - Studded Leggings 
+	- Studded Tunic 
+	- Tarot Cards 
+    - Stealable Artifacts Generator 
+ - Decoration:
+    - Uzeraan Mansion: CaveEnter and Servant of Semidar 
+ - Monster Abilities:
+    - Water Ball
+ - Mobiles:
+    - Orc Scout
+    - Orc Chopper
+ - Items:
+    - Evil Orc Helm 
+    - Orcish Bow   
+    - Library Books:
+       - GrammarOfOrcish
+       - CallToAnarchy
+       - ArmsAndWeaponsPrimer
+       - SongOfSamlethe
+       - TaleOfThreeTribes
+       - GuideToGuilds
+       - BirdsOfBritannia
+       - BritannianFlora
+       - ChildrenTalesVol2
+       - TalesOfVesperVol1
+       - DeceitDungeonOfHorror
+       - DimensionalTravel
+       - EthicalHedonism
+       - MyStory
+       - DiversityOfOurLand
+       - QuestOfVirtues
+       - RegardingLlamas
+       - TalkingToWisps
+       - TamingDragons
+       - BoldStranger
+       - BurningOfTrinsic
+       - TheFight
+       - LifeOfATravellingMinstrel
+       - MajorTradeAssociation
+       - RankingsOfTrades
+       - WildGirlOfTheForest
+       - TreatiseOnAlchemy
+       - VirtueBook
+ - Commands:
+    - Raregen : generates stealable artifact spawners
+    - Rarenum : enumerates world rares spawn locations       
+Changes:
+ - Perfection now gives luck bonus 
+ - Champion Spawns altars were updated to OSI 
+ - Quest Offer item no longer send offer gump to stuff 
+ - Resurrection effects was updated to OSI 
+ - Creatures now correctly displayed their bonded and tame status
+ - Barracoon's attackers-mages now will be polymorhed into the shape of a Ratman
+ - Cost of iron ore on faction ore vendors now 16 gp
+ - Ancient MIBs added to starting bank box on Test Center shards
+ - Pub 26:
+    - Increased cap of luck beyond 1200 
+ - Pub 27:
+    - Reduced faction trap cost to 250 silver 
+ - Pub 29:
+    - Moved Britain starting location from The Sweet Dream's Inn to the Wayfarer's Inn in east Britain 
+    - Players can no longer throw bolas while in Animal Form 
+    - Summoned daemons will now take 4 control slots instead of 5. 
+    - Snow Elemental Slayer effect has been improved to now include Ice Elementals
+    - Added Sand Vortex and Efreet to Elemental super slayer group 
+    - Fan Dancer has been added to the Demon Slayer group 
+    - Pet Bonding Time Remover ( only for TC shards ) 
+    - Potion kegs now weigh the correct amount. Full kegs now weigh 100 stones, while empty kegs weigh 20 stones. 
+    - Can no longer use Animate Dead to turn Dark Father corpse into bones 
+ - Pub 30:
+    - Can no longer use Savage Kin Paint while in Animal Form 
+    - Players can now craft Necromancy scrolls 
+    - Players can now craft Spellbooks with magic properties
+    - Houses can no longer be demolished if the house's moving crate still has items in it.
+----------------------------------1.0.0.0 - 1.1.0.0--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fixes:
+ - fixed bug with unequipping items at transformations spells
+Additions:
+ - Music for Taiko Places
+ - Core :
+    - public bool Core.Logging variable, turns on/off logging of unknown client's packets
+    - public bool Mobile.CanReveal variable turns on/off revealing mobile after he perfomed attack
+    - command line option -dll for loading pre-compiled scripts dll from Dll folder 
+    - Gumps: GumpToolTip element, displays message at mouse dropping to it. Format: public void AddToolTip(int number) where number is localized message from cliloc
+ - Tinker's craft items enhancing
+ - AI :
+    - Ninja AI
+    - Samurai AI
+ - Virtues:
+    - Honor
+ - Perfection System for Honor Virtue;
+ - Champion's abilities: Web Ability for Mephitis       
+ - Spells :
+    - Bushido :
+       - Honorable Execution
+       - Confidence
+       - Evasion
+       - Counter Attack
+       - Lightning Strike
+       - Momentum Strike 
+    - Ninjitsu :
+       - Focus Attack
+       - Death Strike
+       - Animal Form
+       - Ki Attack
+       - Surprise Attack
+       - Backstab
+       - Shadowjump
+       - Mirror Image
+ - Weapon abilities :
+    - Armor Pierce
+    - Block
+    - Defense Mastery
+    - Double Shot
+    - Dual Wield
+    - Feint
+    - Frenzied Whirlwind
+    - Nerve Strike
+    - Riding Swipe
+    - Talon Strike 
+ - Canned Evil :
+    - Tokuno's Islands Champion Spawn: Sleeping Dragon
+ - Monster Abilities :
+    - Rage Attack
+    - Spill Acid
+    - Lifeforce Drain
+    - Throwing abilities
+    - Icy Wind
+    - Corrupt Armor
+    - Lower Resistances
+    - Poison Spit 
+ - Items:
+    - Leather Ninja Belt
+    - For Quests :
+       - Core:
+          - Quest Moongate
+          - Quest Offer Item
+          - SE Teleporter
+       - Emino's Undertaking:
+          - Blue Teleporter
+          - Daimyo Emino's Katana
+          - Echo Barrier
+          - Facing Barrier
+          - Green Teleporter
+          - Lid Chest
+          - Mansion Barrier
+          - Note For Zoel
+          - Passage Barrier
+          - Red Teleporter
+          - White Teleporter	
+       - Haochi's Trials:
+          - Blue Path Barrier
+          - Blue Zone Barrier
+          - Bridge Barrier
+          - Daimyo Haochi's Katana
+          - Green Path Barrier
+          - Green Zone Barrier
+          - Honor Candle
+          - Ninja Path Barrier
+          - Red Path Barrier
+          - Red Zone Barrier
+          - Samurai Teleporter
+          - Treasure Zone Barrier
+          - Yellow Path Barrier
+          - Yellow Zone Barrier
+    - Food : 
+       - Miso Soup
+       - Awase Miso Soup
+       - Red Miso Soup
+       - White Miso Soup
+       - Sushi Rolls
+       - Sushi Platter
+       - Green Tea
+       - Wasabi
+       - Bento Box
+       - Wasabi Clumps
+       - Bowl of Carrots
+       - Bowl of Corn
+       - Bowl of Lettuce
+       - Bowl of Peas
+       - Bowl of Potatoes
+       - Bowl of Stew
+       - Tomato Soup
+       - Pewter Bowl
+    - Origami
+       - Origami Paper
+       - Delicate Origami Butterfly
+       - Delicate Origami Songbird
+       - Delicate Origami Fish
+       - Delicate Origami Frog
+       - Delicate Origami Swan
+       - Intricate Geometric Origami Shape
+    - Skill Items :
+       - Fishing:
+          - Ancient SOS
+          - Fabled Fishing Net
+       - Ninjitsu :
+          - Egg Bomb
+          - Smoke Bomb
+          - Fukiya
+          - Fukiya Dart
+          - Shuriken
+    - Tokuno Stealable Artifacts :
+       - Baskets
+       - Bowls
+       - Cups
+       - Fans
+       - Flowers
+       - Paintings
+       - Sake
+       - Sculptures
+       - Sword Displays
+       - Teapot
+       - Tower Lantern
+       - Urn
+       - Zen Rock Garden
+ - Mobiles :
+    - For Quests :
+       - Terrible Hatchlings : Ansella Gryen
+       - Emino's Undertaking :
+          - Daimyo Emino
+          - Elite Ninja Zoel
+          - Enshrouded Figure
+          - Henchman
+          - Hiders
+          - Jedah Entille   
+       - Haochi's Trials :
+          - Cursed Soul
+          - Daimyo Haochi
+          - Deadly Imp
+          - Diseased Cat
+          - Disheveled Relnia
+          - Fierce Dragon
+          - Guardsman
+          - Injured Wolf
+          - Young Ninja
+          - Young Ronin
+    - Animals :
+       - Crane
+       - Gaman
+    - Mounts :
+       - Fire Beetle
+       - Hiryu
+       - Lesser Hiryu
+    - Monsters :
+       - Bake Kitsune
+       - DeathWatch Beetle
+       - DeathWatch Hatchling
+       - Elite Ninja
+       - Fan Dancer
+       - Kappa
+       - Kaze Kemono
+       - Lady Of The Snow
+       - Oni
+       - Rai-Ju
+       - Revenant Lion
+       - Ronin
+       - Rune Beetle
+       - Tsuki Wolf
+       - Yamandon
+       - Yomotsu Elder
+       - Yomotsu Priest
+       - Yomotsu Warrior
+       - Leviathan
+    - Special:
+       - Serado the Awakened   
+    - Townfolk:
+       - Tokuno Banker
+       - Tokuno Town Crier
+       - Samurai
+       - Ninja
+    - Vendors:
+       - Tokuno Alchemist
+       - Tokuno Animal Trainer
+       - Tokuno Architect
+       - Tokuno Armorer
+       - Tokuno Baker
+       - Tokuno Blacksmith
+       - Tokuno Bowyer
+       - Tokuno Butcher
+       - Tokuno Carpenter
+       - Tokuno Cobbler
+       - Tokuno Cook
+       - Tokuno Furtrader
+       - Tokuno Herbalist
+       - Tokuno Inn Keeper
+       - Tokuno Jeweler
+       - Tokuno Mage
+       - Tokuno Mapmaker
+       - Tokuno Provisioner
+       - Tokuno Scribe
+       - Tokuno Tailor
+       - Tokuno Tanner
+       - Tokuno Tavern Keeper
+       - Tokuno Tinker
+       - Tokuno Weaponsmith
+       - Tokuno Weaver
+ - Quests :
+    - Core:
+       -  public virtual bool NoContextMenu(PlayerMobile to) was added in BaseQuester class. If it returns false, then Quester don't have Talk Context Menu Entry
+       -  public virtual bool GetAttackEvent( BaseCreature creature ) was added in QuestObjective class for attack event
+       -  public virtual bool OnAttack( BaseCreature creature ) was added in QuestObjective class for attack objective
+    - Terrible Hatchlings 
+    - Emino's Undertaking 
+    - Haochi's Trials
+Changes:
+ - Teleporters for Fan Dancer Dojo, Yomotsu Mines
+ - Shrink Table was updated for new mobiles
+ - Titles were updated for Samurai and Ninja titles
+ - Runebooks and recall runes were updated for Tokuno's Islands facet
+ - Runic tools were updated for new skills
+ - Parry formula was updated for OSI Publish 28
+ - Loot templates were updated for new weapons, armors and instruments
+ - Animal Lore and Veterinary skills support now new animals
+ - Stealing skill was changed for stealable artifacts system
+ - Bulk Orders was updated for new armors, weapons and clothings
+ - Clothings now have strength requiments
+ - Vendor lists supports now custom names
+ - Paragon monsters no longer depend on spawner
+ - Slayer Weapon Groups was updated for new mobiles
+ - Player now can get 105 power scrolls, killing champion spawn's monsters

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sunuo-config>
+  <global>
+    <multi-threading value="off" />
+  </global>
+  <locations>
+    <data-path>C:\Program Files (x86)\Ultima Online</data-path>
+    <data-path>C:\Program Files (x86)\EA GAMES\Ultima Online Gold</data-path>
+  </locations>
+  <libraries />
+  <login>
+    <ignore-auth-id value="off" />
+  </login>
+</sunuo-config>
